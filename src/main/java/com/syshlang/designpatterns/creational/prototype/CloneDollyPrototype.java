@@ -18,7 +18,7 @@ public class CloneDollyPrototype {
 
     static class  Client{
         public static void main(String[] args) {
-           /* ConcreteSheepPrototype dolly = new ConcreteSheepPrototype("dolly",2,"gray");
+            ConcreteSheepPrototype dolly = new ConcreteSheepPrototype("dolly",2,"gray");
             dolly.setMother(new ConcreteSheepPrototype("dolly",5,"gray"));
             ConcreteSheepPrototype sheepPrototype = (ConcreteSheepPrototype) dolly.clone();
             ConcreteSheepPrototype sheepPrototype1 = (ConcreteSheepPrototype) dolly.clone();
@@ -27,7 +27,7 @@ public class CloneDollyPrototype {
             System.out.println(dolly);
             System.out.println(sheepPrototype);
             System.out.println(sheepPrototype1);
-            System.out.println(sheepPrototypeN);*/
+            System.out.println(sheepPrototypeN);
 
 
             DeepConcreteSheepPrototype deepDolly = new DeepConcreteSheepPrototype("dolly",2,"gray");
