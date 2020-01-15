@@ -10,4 +10,4 @@
 
 
 - 相关博文
- JAVA开发中的23种设计模式：https://syshlang.github.io/categories/technology/JAVA/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/
+ [JAVA开发中的23种设计模式](https://syshlang.github.io/categories/technology/JAVA/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/)
