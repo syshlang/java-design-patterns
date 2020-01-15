@@ -17,9 +17,29 @@ package com.syshlang.designpatterns.creational.prototype;
 public class CloneDollyPrototype {
 
     static class  Client{
-        ConcreteSheepPrototype dolly = new ConcreteSheepPrototype("dolly",2,"gray");
-        ConcreteSheepPrototype sheepPrototype = (ConcreteSheepPrototype) dolly.clone();
-        ConcreteSheepPrototype sheepPrototype1 = (ConcreteSheepPrototype) dolly.clone();
-        ConcreteSheepPrototype sheepPrototypeN = (ConcreteSheepPrototype) dolly.clone();
+        public static void main(String[] args) {
+           /* ConcreteSheepPrototype dolly = new ConcreteSheepPrototype("dolly",2,"gray");
+            dolly.setMother(new ConcreteSheepPrototype("dolly",5,"gray"));
+            ConcreteSheepPrototype sheepPrototype = (ConcreteSheepPrototype) dolly.clone();
+            ConcreteSheepPrototype sheepPrototype1 = (ConcreteSheepPrototype) dolly.clone();
+            ConcreteSheepPrototype sheepPrototypeN = (ConcreteSheepPrototype) dolly.clone();
+            dolly.getMother().setColor("red");
+            System.out.println(dolly);
+            System.out.println(sheepPrototype);
+            System.out.println(sheepPrototype1);
+            System.out.println(sheepPrototypeN);*/
+
+
+            DeepConcreteSheepPrototype deepDolly = new DeepConcreteSheepPrototype("dolly",2,"gray");
+            deepDolly.setMother(new ConcreteSheepPrototype("dolly",5,"gray"));
+            DeepConcreteSheepPrototype deepConcreteSheepPrototype = deepDolly.clone();
+            DeepConcreteSheepPrototype deepConcreteSheepPrototype1 = deepDolly.clone();
+            DeepConcreteSheepPrototype deepConcreteSheepPrototypeN = deepDolly.clone();
+            deepDolly.getMother().setColor("red");
+            System.out.println(deepDolly);
+            System.out.println(deepConcreteSheepPrototype);
+            System.out.println(deepConcreteSheepPrototype1);
+            System.out.println(deepConcreteSheepPrototypeN);
+        }
     }
 }

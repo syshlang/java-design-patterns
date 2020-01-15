@@ -16,9 +16,11 @@ package com.syshlang.designpatterns.creational.prototype;
 public class CloneDollySimple {
 
     static class  Client{
-        Sheep dolly = new Sheep("dolly",2,"gray");
-        Sheep sheep = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());
-        Sheep sheep1 = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());
-        Sheep sheepN = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());
+        public static void main(String[] args) {
+            Sheep dolly = new Sheep("dolly",2,"gray");
+            Sheep sheep = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());
+            Sheep sheep1 = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());
+            Sheep sheepN = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());
+        }
     }
 }

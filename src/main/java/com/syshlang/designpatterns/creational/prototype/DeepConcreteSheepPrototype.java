@@ -1,34 +1,31 @@
 /*
  * Copyright (c) 2020.
- * @File: SheepPrototype.java
+ * @File: DeepConcreteSheepPrototype.java
  * @Description:
  * @Author: sunys
- * @Date: 2020/1/3 下午4:03
+ * @Date: 2020/1/15 下午1:38
  * @since:
  */
 
 package com.syshlang.designpatterns.creational.prototype;
-
-import java.awt.*;
-
 /**
  * @author sunys
  */
-public abstract class SheepPrototype implements Cloneable{
+public class DeepConcreteSheepPrototype  implements Cloneable{
     private String name;
     private int age;
     private String color;
     private SheepPrototype mother;
 
-    public SheepPrototype(String name, int age, String color) {
+    public DeepConcreteSheepPrototype(String name, int age, String color) {
         this.name = name;
         this.age = age;
         this.color = color;
     }
 
-    public SheepPrototype() {
+    public DeepConcreteSheepPrototype() {
     }
-    protected abstract String eat();
+
     public String getName() {
         return name;
     }
@@ -66,19 +63,21 @@ public abstract class SheepPrototype implements Cloneable{
      * @return
      */
     @Override
-    protected SheepPrototype clone()  {
-        SheepPrototype sheepPrototype = null;
+    protected DeepConcreteSheepPrototype clone()  {
+        DeepConcreteSheepPrototype deepConcreteSheepPrototype = null;
         try {
-            sheepPrototype = (SheepPrototype) super.clone();
+            deepConcreteSheepPrototype = (DeepConcreteSheepPrototype) super.clone();
+            SheepPrototype sheepPrototype = mother.clone();
+            deepConcreteSheepPrototype.mother = sheepPrototype;
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-        return sheepPrototype;
+        return deepConcreteSheepPrototype;
     }
 
     @Override
     public String toString() {
-        return "SheepPrototype{" +
+        return "DeepConcreteSheepPrototype{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", color='" + color + '\'' +

@@ -9,6 +9,8 @@
 
 package com.syshlang.designpatterns.creational.prototype;
 
+import java.awt.*;
+
 /**
  * 创建当前对象的浅表副本
  * @author sunys
@@ -16,5 +18,9 @@ package com.syshlang.designpatterns.creational.prototype;
 public class ConcreteSheepPrototype extends SheepPrototype{
     public ConcreteSheepPrototype(String name, int age, String color) {
         super(name, age, color);
+    }
+    @Override
+    protected String eat() {
+        return "Eating green grass";
     }
 }
