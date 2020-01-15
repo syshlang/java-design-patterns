@@ -9,12 +9,12 @@
 
 package com.syshlang.designpatterns.creational.prototype;
 
-import java.awt.*;
+import java.io.Serializable;
 
 /**
  * @author sunys
  */
-public abstract class SheepPrototype implements Cloneable{
+public abstract class SheepPrototype implements Cloneable, Serializable {
     private String name;
     private int age;
     private String color;

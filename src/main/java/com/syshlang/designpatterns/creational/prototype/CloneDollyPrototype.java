@@ -24,6 +24,7 @@ public class CloneDollyPrototype {
             ConcreteSheepPrototype sheepPrototype1 = (ConcreteSheepPrototype) dolly.clone();
             ConcreteSheepPrototype sheepPrototypeN = (ConcreteSheepPrototype) dolly.clone();
             dolly.getMother().setColor("red");
+            dolly.setAge(6);
             System.out.println(dolly);
             System.out.println(sheepPrototype);
             System.out.println(sheepPrototype1);
@@ -40,6 +41,15 @@ public class CloneDollyPrototype {
             System.out.println(deepConcreteSheepPrototype);
             System.out.println(deepConcreteSheepPrototype1);
             System.out.println(deepConcreteSheepPrototypeN);
+
+
+            DeepConcreteSheepSerializable deepDollySerializable = new DeepConcreteSheepSerializable("dolly",2,"gray");
+            deepDollySerializable.setMother(new ConcreteSheepPrototype("dolly",5,"gray"));
+            DeepConcreteSheepSerializable deepConcreteSheepSerializable = deepDollySerializable.deepClone();
+            deepDollySerializable.getMother().setColor("red");
+            deepDollySerializable.setAge(6);
+            System.out.println(deepDollySerializable);
+            System.out.println(deepConcreteSheepSerializable);
         }
     }
 }
