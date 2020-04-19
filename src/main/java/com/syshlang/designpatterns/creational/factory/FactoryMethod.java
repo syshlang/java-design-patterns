@@ -10,34 +10,54 @@
 package com.syshlang.designpatterns.creational.factory;
 
 /**
+ * The type Factory method.
+ *
  * @author sunys
  */
 public class FactoryMethod {
 
-    public static void main(String[] args) {
-        CircleFactory circleFactory = new CircleFactory();
-        Shape circle = circleFactory.createShape();
-        RectangleFactory rectangleFactory = new RectangleFactory();
-        Shape rectangle = rectangleFactory.createShape();
+    /**
+     * The interface Shape.
+     */
+    interface Shape{}
+    private static class Circle implements Shape {
+        @Override
+        public String toString() {
+            return "Circle{" + super.toString()+ '}';
+        }
     }
-    private interface Shape{}
-    private static class Circle implements Shape { }
-    private static class Rectangle implements Shape { }
+    private static class Rectangle implements Shape {
+        @Override
+        public String toString() {
+            return "Rectangle{" + super.toString()+ '}';
+        }
+    }
 
     private interface ShapeFactoryMethod{
         /**
          * 生产几何图型
-         * @return
+         *
+         * @return shape shape
          */
-        Shape createShape();
+        Shape getShape();
     }
-    private static class CircleFactory implements ShapeFactoryMethod{
-        public Shape createShape() {
+
+    /**
+     * The type Circle factory.
+     */
+    class CircleFactory implements ShapeFactoryMethod{
+        @Override
+        public Shape getShape() {
             return new Circle();
         }
     }
-    private static class RectangleFactory implements ShapeFactoryMethod{
-        public Shape createShape() {
+
+    /**
+     * The type Rectangle factory.
+     */
+    class RectangleFactory implements ShapeFactoryMethod{
+        @Override
+        public Shape getShape() {
             return new Rectangle();
         }
     }

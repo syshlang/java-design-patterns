@@ -10,13 +10,21 @@
 package com.syshlang.designpatterns.creational.prototype;
 
 /**
- *
  * 以原型模式克隆多莉羊
+ *
  * @author sunys
  */
 public class CloneDollyPrototype {
 
+    /**
+     * The type Client.
+     */
     static class  Client{
+        /**
+         * The entry point of application.
+         *
+         * @param args the input arguments
+         */
         public static void main(String[] args) {
             ConcreteSheepPrototype dolly = new ConcreteSheepPrototype("dolly",2,"gray");
             dolly.setMother(new ConcreteSheepPrototype("dolly",5,"gray"));

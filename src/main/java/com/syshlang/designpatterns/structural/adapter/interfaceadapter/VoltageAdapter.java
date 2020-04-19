@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.structural.adapter.interfaceadapter;
 
 /**
+ * The type Voltage adapter.
+ *
  * @author sunys
  */
 public class VoltageAdapter extends AbstractVoltageAdapter{

@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.structural.adapter.interfaceadapter;
 
 /**
+ * The type Abstract voltage adapter.
+ *
  * @author sunys
  */
 public  abstract class AbstractVoltageAdapter implements Destination{

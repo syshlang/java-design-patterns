@@ -201,3 +201,4 @@ buildNumber.properties
 java-design-patterns.iml
 src/main/resources/
 src/test/
+!/src/test/

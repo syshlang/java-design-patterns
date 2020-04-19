@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Lazy thread safe sync block.
+ *
  * @author sunys
  */
 public class LazyThreadSafeSyncBlock {
@@ -22,7 +24,8 @@ public class LazyThreadSafeSyncBlock {
 
     /**
      * 提供一个静态的公有方法，对代码块加入同步锁，解决线程安全问题
-     * @return
+     *
+     * @return instance instance
      */
     public static LazyThreadSafeSyncBlock getInstance() {
         if (instance == null){

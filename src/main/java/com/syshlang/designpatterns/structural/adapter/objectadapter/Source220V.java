@@ -10,9 +10,16 @@
 package com.syshlang.designpatterns.structural.adapter.objectadapter;
 
 /**
+ * The type Source 220 v.
+ *
  * @author sunys
  */
 public class Source220V {
+    /**
+     * Out voltage 220 v int.
+     *
+     * @return the int
+     */
     public int outVoltage220v(){
         return 220;
     }

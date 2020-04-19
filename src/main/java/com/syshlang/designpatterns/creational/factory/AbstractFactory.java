@@ -10,17 +10,28 @@
 package com.syshlang.designpatterns.creational.factory;
 
 /**
+ * The type Abstract factory.
+ *
  * @author sunys
  */
 public class AbstractFactory {
-    public static void main(String[] args) {
-        ShapeAbstractFactory circlecombination = ShapeAbstractFactory.getFactory("circlecombination");
-        Shape shape = circlecombination.getShape();
-    }
 
-    private interface Shape{}
-    private static class Circle implements Shape { }
-    private static class Rectangle implements Shape { }
+    /**
+     * The interface Shape.
+     */
+    interface Shape{}
+    private static class Circle implements Shape {
+        @Override
+        public String toString() {
+            return "Circle{" + super.toString()+ '}';
+        }
+    }
+    private static class Rectangle implements Shape {
+        @Override
+        public String toString() {
+            return "Rectangle{" + super.toString()+ '}';
+        }
+    }
 
     /**
      * 圆组合
@@ -42,9 +53,19 @@ public class AbstractFactory {
     }
 
 
-    private static abstract class ShapeAbstractFactory{
+    /**
+     * The type Shape abstract factory.
+     */
+    static abstract class ShapeAbstractFactory{
         private static final CircleCombination CIRCLECOMBINATION = new CircleCombination();
         private static final RectangleCombination RECTANGLECOMBINATION = new RectangleCombination();
+
+        /**
+         * Get factory shape abstract factory.
+         *
+         * @param Combination the combination
+         * @return the shape abstract factory
+         */
         static ShapeAbstractFactory getFactory(String Combination){
             if ("circlecombination".equals(Combination)){
                 return CIRCLECOMBINATION;
@@ -54,6 +75,12 @@ public class AbstractFactory {
             }
             return null;
         }
+
+        /**
+         * Gets shape.
+         *
+         * @return the shape
+         */
         abstract Shape getShape();
     }
 }

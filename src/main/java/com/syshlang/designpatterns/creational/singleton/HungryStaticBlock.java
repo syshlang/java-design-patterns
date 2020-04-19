@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Hungry static block.
+ *
  * @author sunys
  */
 public class HungryStaticBlock {
@@ -28,7 +30,8 @@ public class HungryStaticBlock {
 
     /**
      * 提供一个公有的取得其对象实例的静态方法
-     * @return
+     *
+     * @return instance instance
      */
     public static HungryStaticBlock getInstance() {
         return instance;

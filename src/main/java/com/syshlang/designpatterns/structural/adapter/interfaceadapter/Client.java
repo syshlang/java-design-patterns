@@ -9,7 +9,15 @@
 
 package com.syshlang.designpatterns.structural.adapter.interfaceadapter;
 
+/**
+ * The type Client.
+ */
 public class Client {
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         VoltageAdapter voltageAdapter = new VoltageAdapter();
         voltageAdapter.outVoltage5v();

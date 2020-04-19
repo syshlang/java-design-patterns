@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.structural.adapter.classadapter;
 
 /**
+ * The type Voltage adapter.
+ *
  * @author sunys
  */
 public class VoltageAdapter extends Source220V implements Destination5V{

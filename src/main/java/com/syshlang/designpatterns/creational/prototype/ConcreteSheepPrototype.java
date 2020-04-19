@@ -13,9 +13,17 @@ import java.awt.*;
 
 /**
  * 创建当前对象的浅表副本
+ *
  * @author sunys
  */
 public class ConcreteSheepPrototype extends SheepPrototype{
+    /**
+     * Instantiates a new Concrete sheep prototype.
+     *
+     * @param name  the name
+     * @param age   the age
+     * @param color the color
+     */
     public ConcreteSheepPrototype(String name, int age, String color) {
         super(name, age, color);
     }

@@ -11,11 +11,20 @@ package com.syshlang.designpatterns.creational.prototype;
 
 /**
  * 以传统的简单方式克隆多莉羊
+ *
  * @author sunys
  */
 public class CloneDollySimple {
 
+    /**
+     * The type Client.
+     */
     static class  Client{
+        /**
+         * The entry point of application.
+         *
+         * @param args the input arguments
+         */
         public static void main(String[] args) {
             Sheep dolly = new Sheep("dolly",2,"gray");
             Sheep sheep = new Sheep(dolly.getName(),dolly.getAge(),dolly.getColor());

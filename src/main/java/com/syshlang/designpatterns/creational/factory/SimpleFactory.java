@@ -10,35 +10,58 @@
 package com.syshlang.designpatterns.creational.factory;
 
 /**
+ * The type Simple factory.
+ *
  * @author sunys
  */
 public class SimpleFactory {
 
-    public static void main(String[] args) {
-        Shape shape = ShapeSimpleFactory.getShapeByType("circle");
-    }
-
-    private interface Shape{
+    /**
+     * The interface Shape.
+     */
+    interface Shape{
         /**
-         * @return
+         * Gets shape type.
+         *
+         * @return shape type
          */
         String getShapeType();
     }
-    private static class Circle implements Shape {
+    private class Circle implements Shape {
+        @Override
         public String getShapeType() {
             return "circle";
         }
+
+        @Override
+        public String toString() {
+            return "circle{" + super.toString()+ '}';
+        }
     }
-    private static class Rectangle implements Shape {
+    private class Rectangle implements Shape {
+        @Override
         public String getShapeType() {
             return "rectangle";
+        }
+        @Override
+        public String toString() {
+            return "rectangle{" + super.toString()+ '}';
         }
     }
 
 
-    private static class ShapeSimpleFactory{
+    /**
+     * The type Shape simple factory.
+     */
+    class ShapeSimpleFactory{
 
-        public static Shape getShapeByType(String type){
+        /**
+         * Get shape by type shape.
+         *
+         * @param type the type
+         * @return the shape
+         */
+        Shape getShapeByType(String type){
             if ("circle".equals(type)){
                 return new Circle();
             }else  if ("rectangle".equals(type)){

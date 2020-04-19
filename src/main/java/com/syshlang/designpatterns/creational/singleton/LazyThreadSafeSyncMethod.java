@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Lazy thread safe sync method.
+ *
  * @author sunys
  */
 public class LazyThreadSafeSyncMethod {
@@ -22,7 +24,8 @@ public class LazyThreadSafeSyncMethod {
 
     /**
      * 提供一个静态的公有方法，对方法加入同步锁，解决线程安全问题
-     * @return
+     *
+     * @return instance instance
      */
     public static synchronized LazyThreadSafeSyncMethod getInstance() {
         if (instance == null){

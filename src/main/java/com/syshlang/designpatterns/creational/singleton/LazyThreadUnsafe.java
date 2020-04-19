@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Lazy thread unsafe.
+ *
  * @author sunys
  */
 public class LazyThreadUnsafe {
@@ -22,7 +24,8 @@ public class LazyThreadUnsafe {
 
     /**
      * 提供一个静态的公有方法，当使用到该方法时，才去实例化instance
-     * @return
+     *
+     * @return instance instance
      */
     public static LazyThreadUnsafe getInstance() {
         if (instance == null){

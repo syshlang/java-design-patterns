@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Double checked lock.
+ *
  * @author sunys
  */
 public class DoubleCheckedLock {
@@ -22,7 +24,8 @@ public class DoubleCheckedLock {
 
     /**
      * 提供一个静态的公有方法，加入双重检查代码和同步锁，解决线程安全问题,同时解决懒加载问题
-     * @return
+     *
+     * @return instance instance
      */
     public static DoubleCheckedLock getInstance() {
         if (instance == null){

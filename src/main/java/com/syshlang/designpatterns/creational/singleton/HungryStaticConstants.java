@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Hungry static constants.
+ *
  * @author sunys
  */
 public class HungryStaticConstants {
@@ -26,7 +28,8 @@ public class HungryStaticConstants {
 
     /**
      * 提供一个公有的取得其对象实例的静态方法
-     * @return
+     *
+     * @return hungry static constants
      */
     public static HungryStaticConstants getInstance(){
         return instance;

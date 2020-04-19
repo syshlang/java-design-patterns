@@ -10,6 +10,8 @@
 package com.syshlang.designpatterns.creational.singleton;
 
 /**
+ * The type Static internal class.
+ *
  * @author sunys
  */
 public class StaticInternalClass {
@@ -29,7 +31,8 @@ public class StaticInternalClass {
 
     /**
      * 提供一个静态的公有方法，直接返回内部类的静态属性
-     * @return
+     *
+     * @return instance instance
      */
     public static StaticInternalClass getInstance() {
         return SingletonHolder.INSTANCE;

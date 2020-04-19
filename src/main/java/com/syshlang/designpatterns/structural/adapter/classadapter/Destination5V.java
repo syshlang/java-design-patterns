@@ -9,10 +9,14 @@
 
 package com.syshlang.designpatterns.structural.adapter.classadapter;
 
+/**
+ * The interface Destination 5 v.
+ */
 public interface Destination5V {
     /**
+     * Out voltage 5 v int.
      *
-     * @return
+     * @return int int
      */
     int outVoltage5v();
 }

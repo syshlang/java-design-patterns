@@ -10,10 +10,15 @@
 package com.syshlang.designpatterns.creational.builder;
 
 /**
+ * The type Client.
+ *
  * @author sunys
  */
 public class Client {
-    public static void main(String[] args) {
+    /**
+     * The entry point of application.
+     */
+    public static void builderTest() {
         BaoMaCarBuilder baoMaCarBuilder = new BaoMaCarBuilder();
         CarDirector carDirector = new CarDirector(baoMaCarBuilder);
         Car car = carDirector.builderCar();

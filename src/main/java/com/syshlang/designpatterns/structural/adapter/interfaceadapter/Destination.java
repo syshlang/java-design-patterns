@@ -9,25 +9,35 @@
 
 package com.syshlang.designpatterns.structural.adapter.interfaceadapter;
 
+/**
+ * The interface Destination.
+ */
 public interface Destination {
     /**
+     * Out voltage 5 v int.
      *
-     * @return
+     * @return int int
      */
     int outVoltage5v();
 
     /**
-     * @return
+     * Out voltage 10 v int.
+     *
+     * @return int int
      */
     int outVoltage10v();
 
     /**
-     * @return
+     * Out voltage 36 v int.
+     *
+     * @return int int
      */
     int outVoltage36v();
 
     /**
-     * @return
+     * Out voltage 220 v int.
+     *
+     * @return int int
      */
     int outVoltage220v();
 }
